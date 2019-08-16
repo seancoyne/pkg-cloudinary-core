@@ -737,7 +737,7 @@ function () {
             return elements;
 
           case !Object(_util__WEBPACK_IMPORTED_MODULE_9__["isString"])(elements):
-            return document.querySelectorAll(elements);
+            return Array.prototype.slice.call(document.querySelectorAll(elements), 0);
 
           default:
             return [elements];
